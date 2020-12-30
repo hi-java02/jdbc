@@ -11,6 +11,11 @@ public class AuthorVo {
 	//생성자
 	public AuthorVo() {}
 
+	public AuthorVo(String authorName, String authorDesc) {
+		this.authorName = authorName;
+		this.authorDesc = authorDesc;
+	}
+
 	public AuthorVo(int authorId, String authorName, String authorDesc) {
 		this.authorId = authorId;
 		this.authorName = authorName;

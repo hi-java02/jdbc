@@ -24,7 +24,7 @@ public class AuthorDelete {
 		    // 3. SQL문 준비 / 바인딩 / 실행
 			String query ="";
 			query += " delete from author "; 
-			query +=  "where author_id = ? ";
+			query += " where author_id = ? ";
 			
 			/*
 			delete from author

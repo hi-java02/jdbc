@@ -14,9 +14,15 @@ public class AuthorApp {
 		
 		
 		//등록
-		authorDao.authorInsert("이문열", "경북영양"); //작가테이블에 데이터 저장
-		authorDao.authorInsert("박경리", "경상남도 통영"); //작가테이블에 데이터 저장
-		authorDao.authorInsert("유시민", "17대 국회의원"); //작가테이블에 데이터 저장
+		AuthorVo authorVo1 = new AuthorVo("이문열", "경북영양");
+		authorDao.authorInsert(authorVo1); //작가테이블에 데이터 저장
+		
+		AuthorVo authorVo2 = new AuthorVo("박경리", "경상남도 통영");
+		authorDao.authorInsert(authorVo2); //작가테이블에 데이터 저장
+		
+		AuthorVo authorVo3 = new AuthorVo("박경리", "경상남도 통영");
+		authorDao.authorInsert(authorVo3); //작가테이블에 데이터 저장
+		
 		
 		//리스트
 	    authorList = authorDao.getAuthorList();
@@ -44,7 +50,8 @@ public class AuthorApp {
 	    
 	    
 	    //작가 수정
-	    authorDao.authorUpdate(2, "김경리", "제주도" );
+	    AuthorVo authorVo4 = new AuthorVo(2, "김경리", "제주도");
+	    authorDao.authorUpdate(authorVo4);
 		
 	    
 	    //리스트 출력
